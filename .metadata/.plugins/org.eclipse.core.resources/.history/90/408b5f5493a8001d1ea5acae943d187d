@@ -1,0 +1,14 @@
+
+public class Main {
+	
+	public static void main(String[] args) {
+		int inta = 1;
+		int intb = inta;
+		
+		System.out.println("inta" + inta + "intb "+ intb);
+		inta = 2;
+		System.out.println("inta " + inta + " intb" + intb);
+	}
+
+
+}

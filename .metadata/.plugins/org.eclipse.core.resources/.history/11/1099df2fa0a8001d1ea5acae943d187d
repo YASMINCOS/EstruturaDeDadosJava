@@ -1,0 +1,34 @@
+
+public class Pilha {
+
+	private No referenciaNoEntradaPilha;
+
+	public Pilha() {
+		this.referenciaNoEntradaPilha = null;
+	}
+	
+	public void push(No newNo) {
+		No referenciaAuxiliar = referenciaNoEntradaPilha;
+		referenciaNoEntradaPilha = newNo;
+		referenciaNoEntradaPilha.setReferencia(referenciaAuxiliar);
+	}
+	
+	public No pop() {
+		if (this.isEmpty()) {
+			No noPoped = referenciaNoEntradaPilha;
+			referenciaNoEntradaPilha = referenciaNoEntradaPilha.getReferencia();
+		}
+		return null;
+	}
+	public No top() {
+		return referenciaNoEntradaPilha;
+	}
+	
+	public boolean isEmpty() {
+		
+		if(referenciaNoEntradaPilha == null) {
+			return true;
+		}
+		return false;
+	}
+}

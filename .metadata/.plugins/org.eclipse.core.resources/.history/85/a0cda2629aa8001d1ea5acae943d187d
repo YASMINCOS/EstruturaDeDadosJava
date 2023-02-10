@@ -1,0 +1,8 @@
+
+public class Generics {
+
+	//evitae casting excessivo
+	//evitar codigos redundates
+	//encontrar erros em tempo de compilação
+	
+}

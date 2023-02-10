@@ -1,0 +1,10 @@
+
+public class Pilha {
+
+	private No referenciaNoEntradaPilha;
+
+	public Pilha() {
+		this.referenciaNoEntradaPilha = null;
+	}
+	
+}

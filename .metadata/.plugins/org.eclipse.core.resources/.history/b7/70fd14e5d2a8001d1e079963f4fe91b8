@@ -1,0 +1,19 @@
+
+public class ListasDuplamenteEncadeadas <T>{
+
+	
+	private No<T> primeitroNo;
+	private No<T> ultimoNo;
+	
+	private int tamanhoLista = 0;
+	public ListasDuplamenteEncadeada() {
+		primeitroNo = null;
+		ultimoNo = null;
+		this.tamanhoLista = 0;
+	}
+	
+	
+	public int size() {
+		return tamanhoLista.
+	}
+}

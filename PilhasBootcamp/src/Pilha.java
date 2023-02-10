@@ -1,0 +1,56 @@
+
+public class Pilha {
+
+	private No referenciaNoEntradaPilha;
+
+	public Pilha() {
+		this.referenciaNoEntradaPilha = null;
+	}
+	
+	public void push(No newNo) {
+		No referenciaAuxiliar = referenciaNoEntradaPilha;
+		referenciaNoEntradaPilha = newNo;
+		referenciaNoEntradaPilha.setReferencia(referenciaAuxiliar);
+	}
+	
+	public No pop() {
+		if (!isEmpty()) {
+			No noPoped = referenciaNoEntradaPilha;
+			referenciaNoEntradaPilha = referenciaNoEntradaPilha.getReferencia();
+		}
+		return null;
+	}
+	public No top() {
+		return referenciaNoEntradaPilha;
+	}
+	
+	public boolean isEmpty() {
+		
+		if(referenciaNoEntradaPilha == null) {
+			return true;
+		}
+		return false;
+	}
+	
+	@Override
+	
+	public String toString() {
+		String stringRetorno = "----------- \n";
+		stringRetorno += " Pilha \n";
+		stringRetorno += "-------";
+		
+		
+		No noAuxiliar = referenciaNoEntradaPilha;
+		
+		while(true) {
+			if (noAuxiliar != null) {
+				stringRetorno += "[No{dado= "+ noAuxiliar.getDado() +"}]\n";
+				noAuxiliar = noAuxiliar.getReferencia();
+			}else {
+				break;
+			}
+		}
+		stringRetorno += "===========\n";
+		return stringRetorno;
+	}
+}

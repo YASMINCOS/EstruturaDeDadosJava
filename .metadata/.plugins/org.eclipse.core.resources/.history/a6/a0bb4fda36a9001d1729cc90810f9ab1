@@ -1,0 +1,27 @@
+
+public class Arvore<T extends Comparable<T>> {
+
+	
+	private NoBi<T> raiz;
+	
+	public Arvore() {
+		this.raiz = null;
+	}
+	
+	public void inserir(T conteudo) {
+		NoBi<T> novoNo = new NoBi<>(conteudo);
+		raiz = inserir(raiz, novoNo);
+	}
+	
+	private NoBi<T> inserir(NoBi<T> atual, NoBi<T> novoNo){
+		if(atual == null) {
+			return novoNo;
+					
+		}else if(novoNo.getConteudo().compareTo(atual.getConteudo())<0) {
+			atual.setNoEsquerda(inserir(atual.getNoEsquerda(),novoNo));
+		}else {
+			atual.setNoDireita(inserir(atual.getNoDireita(),novoNo));
+		}
+		return null;
+	}
+}

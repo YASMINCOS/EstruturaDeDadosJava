@@ -1,0 +1,9 @@
+
+public class ListasDuplamenteEncadeadas <T>{
+
+	
+	private No<T> primeitroNo;
+	private No<T> ultimoNo;
+	
+	private int tamanhoLista = 0;
+}

@@ -1,0 +1,56 @@
+
+public class Fila {
+
+	private No referenciaEntradaFila;
+
+	public Fila() {	
+		this.referenciaEntradaFila = null;
+	}
+	
+	public void enqueue( No newNo) {
+		newNo.setReferencia(referenciaEntradaFila);
+		referenciaEntradaFila = newNo;
+	}
+	
+	public No first() {
+		if (!isEmpty()) {
+			No primeiroNo = referenciaEntradaFila;
+			while(true) {
+				if (primeiroNo.getReferencia() != null) {
+					primeiroNo = primeiroNo.getReferencia();
+				}else {
+					break;
+				}
+			}
+			
+		}
+		return null;
+	}
+	
+	public No dequeue() {
+		if (!isEmpty()) {
+			No primeiroNo = referenciaEntradaFila;
+			No noAuxiliar = referenciaEntradaFila;
+			while(true) {
+				if (primeiroNo.getReferencia() != null) {
+					noAuxiliar = primeiroNo;
+					primeiroNo = primeiroNo.getReferencia();
+				}else {
+					noAuxiliar.setReferencia(null);
+					break;
+				}
+			}
+			
+		}
+		return null;
+	}
+	
+	private boolean isEmpty() {
+		if(referenciaEntradaFila == null) {
+			return true;
+		}
+		return false;
+	}
+	
+	
+}

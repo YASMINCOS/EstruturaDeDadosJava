@@ -1,0 +1,17 @@
+
+public class Pilha {
+
+	private No referenciaNoEntradaPilha;
+
+	public Pilha() {
+		this.referenciaNoEntradaPilha = null;
+	}
+	
+	public boolean isEmpty() {
+		
+		if(referenciaNoEntradaPilha == null) {
+			return true;
+		}
+		return false;
+	}
+}

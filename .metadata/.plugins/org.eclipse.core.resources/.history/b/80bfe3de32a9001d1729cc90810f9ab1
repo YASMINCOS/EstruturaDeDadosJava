@@ -1,0 +1,7 @@
+
+public class NoBi<T> {
+
+	private T conteudo;
+	private NoBi<T> noEsquerda;
+	private NoBi<T> noDireita;
+}
